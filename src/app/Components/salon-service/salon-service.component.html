@@ -1,1 +1,8 @@
-<p>salon-service works!</p>
+<div class="upload-form">
+  <h3>Upload New Photo</h3>
+  <form (submit)="onUpload($event)">
+    <input type="file" (change)="onFileSelected($event)" required />
+    <input type="text" [(ngModel)]="description" placeholder="Description" required />
+    <button type="submit">Upload</button>
+  </form>
+</div>
