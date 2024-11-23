@@ -1,0 +1,11 @@
+<div class="photo-gallery">
+  <h2>Our Services</h2>
+  <div class="photos">
+    <div class="photo-card" *ngFor="let photo of photos">
+      <img [src]="photo.url" alt="{{ photo.description }}" />
+      <p>{{ photo.description }}</p>
+      <small>Uploaded by: {{ photo.uploadedBy }} on {{ photo.uploadedAt | date }}</small>
+    </div>
+  </div>
+</div>
+<app-photo-gallery></app-photo-gallery>
